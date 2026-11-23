@@ -20,16 +20,12 @@ public class Ticket {
     public void setHolderName(String holderName) {this.holderName = holderName;}
     public void setBasePrice(double basePrice) {this.basePrice = basePrice;}
 
-    public calculatePrice(){
-        return basePrice = 50.00;
+    public double calculatePrice(){
+        return basePrice;
     }
 
     @Override
     public String toString() {
-        return "Ticket{" +
-                "eventName='" + eventName + '\'' +
-                ", holderName='" + holderName + '\'' +
-                ", basePrice=" + basePrice +
-                '}';
+        return String.format("Standard Ticket - %s: €%.2f", getHolderName(), calculatePrice());
     }
 }
